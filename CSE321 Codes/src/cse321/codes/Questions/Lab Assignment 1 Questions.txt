@@ -1,0 +1,25 @@
+Task: 1
+Think of a scenario where you are stuck in a room with nothing but a laptop with Linux OS. Now you are given a set of instructions for hacking the lock. You need to complete each of the tasks properly to help you unlock the door. Make sure you perform these tasks as a Super User. First, you need to create 3 files named key1.txt, key2.txt, key3.txt and 2 directories named Box1, Box2. Next copy key1.txt and key2.txt to Box1 directory. Then move key3.txt to the Box2 directory. Now, copy the Box1 directory along with contents to the Box3 directory. Now move into the Box3 directory and check the permissions of the files in there and change the permissions for both user and group to only read-execute for all the files that have read-write-execute permissions. Now go back one directory and print the current working directory and then print all the directories and files in the current working directory. Finally move the Box3 folder to the root directory and delete the rest of the files and folders in the current working directory. Write down all the commands in the exact same order as you have written in the command line while following the instructions. 
+As soon as you execute the last command you hear a click on the door. Someone is standing at the door and at that moment you realize that the door was actually opened by that person. You get out of the room disappointed that you couldn't hack the lock. Well don't be disappointed. This is just the start. If you keep working with Linux one day you will surely be able to do a lot of exciting things with it. 	
+
+
+Task: 2
+Count the lines containing the word “Hello” in a file named hello.txt
+	
+
+Task: 3
+What is the difference between soft and hard links?
+	
+
+Task: 4
+Create a file name firstone.txt 
+Create a second file name second.txt with the contents of firstone.txt [ don’t use copy here]
+
+
+Task: 5	
+Show all the hidden files in a directory
+	
+
+Task: 6
+Show only lines 15-21 of a .txt file
+	
