@@ -1,0 +1,158 @@
+Name: Kazi Md. Al-Wakil
+ID: 19301051 
+-----------------------
+
+Task: 1 
+--------
+#!/bin/bash
+
+sum=0
+for ((i=0; i<10; i++))
+do
+  echo "Number: "
+  read a
+  if [ $(($a % 2)) -eq 0 ];
+    then if [ $(($a % 8)) -ne 0 ];
+      then sum=$(($sum+$a))
+        fi
+  fi
+done
+echo "Sum is: $sum" 
+
+
+Task: 2
+--------
+#!/bin/bash
+
+echo "Number: "
+read a
+
+if [ $(($a % 10)) -eq 0 ]
+  then if [ $(($a % 4)) -ne 0 ] 
+    then if [ $(($a % 5)) -ne 0 ]
+      then echo "Rasengan"
+      fi
+    fi
+  fi
+if [ $(($a % 5)) -eq 0 ] 
+  then if [ $(($a % 6)) -ne 0 ]
+    then echo "Oodama Rasengan"
+  else
+    echo "Rasen Shuriken"
+    fi
+elif [ $(($a % 6)) -eq 0 ] 
+  then if [ $(($a % 5)) -ne 0 ]
+    then echo "Oodama Rasengan"
+  else
+    echo "Rasen Shuriken"
+    fi
+fi
+
+Task: 3
+--------
+#!/bin/bash
+echo "Enter a number: "
+read num
+
+#method
+happyPrime (){
+  rem=0
+  sum=0
+  num=$1
+  while(($num > 0))
+  do
+    rem=$(($num % 10))
+    sum=$(( $sum + $(( $rem * $rem ))))
+    num=$(($num/10))
+  done
+  return $sum
+}
+
+
+temp=0
+result=$num
+
+for((i=2; i<$num; i++))
+do
+  if(( $(($num%$i)) == 0 ))
+    then temp=$(($temp + 1))
+  fi
+done
+if (( $temp > 0 ))
+  then echo "Not Prime"
+else
+  while [ $result -ne 1 ] && [ $result -ne 4 ]
+  do
+    happyPrime $result
+    result=$?
+  done
+
+  if (($result == 1))
+    then echo "A happy prime number"
+  else
+    echo "Not a happy prime number"
+  fi
+fi
+
+
+Task: 4
+--------
+#!/bin/bash
+
+sum (){
+  echo "Sum: "$(($1 + $2))
+}
+sub (){
+  echo "Substraction: "$(($1 - $2))
+}
+mul (){
+  echo "Multiplication: "$(($1 * $2))
+}
+
+echo "First Number : "
+read a
+echo "Second Number : "
+read b
+echo "Third Number : "
+read c
+
+if [ $a -gt $b ];
+  then sub $a $b 
+fi
+if [ $c -lt $b ];
+  then sum $b $c 
+elif [ $b -eq $c ];
+  then mul $b $c 
+fi
+
+Task: 5
+--------
+#!/bin/bash
+
+
+declare -a array
+echo "How many inputs? "
+read n
+
+for ((i=0; i<n; i++))
+do
+  echo "Number: "
+  read b
+  array[$i]=$b
+done
+echo "Array: "${array[*]}
+
+for((i=0; i<n-1; i++))
+do
+  index=$i
+  for((j=i+1; j<n; j++))
+  do 
+    if((${array[$j]} < ${array[$index]}))
+    then index=$j
+      fi
+  done
+  temp=${array[$index]}
+  array[$index]=${array[$i]}
+  array[$i]=$temp
+done
+echo "Sorted Array: "${array[*]}

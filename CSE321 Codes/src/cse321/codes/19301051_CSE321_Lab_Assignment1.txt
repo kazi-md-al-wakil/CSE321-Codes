@@ -1,0 +1,53 @@
+Name: Kazi Md. Al-Wakil
+Id: 19301051
+____________
+
+1.
+sudo su
+cat > key1.txt
+cat > key2.txt
+cat > key3.txt
+mkdir Box1
+mkdir Box2
+cp key1.txt key2.txt Box1
+mv key3.txt Box2
+mkdir Box3
+cp -r Box1 Box3
+cd Box3
+ls 
+cd Box1
+ls -l
+chmod ug=rx key1.txt
+chmod ug=rx key2.txt
+ls -l
+cd ..
+pwd
+ls
+cd Box1
+pwd
+cd..
+cd..
+ls
+mv Box3 root
+rm -r Box1
+rm -r Box2
+rm key1.txt key2.txt
+
+2.
+cat > hello.txt
+grep -c Hello hello.txt
+
+3.
+The difference between soft links and hard links are:
+A soft link is an actual link to the original file and a hard link is a mirror copy of the original file 
+which has the same inode.
+
+4. 
+cat > firstone.txt
+ln firstone.txt second.txt
+
+5.
+ls -a
+
+6. 
+sed -n -e 15,21p a.txt
